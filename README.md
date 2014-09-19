@@ -2,7 +2,7 @@
 
 A grunt wrapper around https://github.com/madebysource/sprites-preprocessor
 
-The only sprites generator that handles CSS replacement well enough I found.
+The only sprites generator I found, that handles CSS replacement well enough.
 
 ### usage
 
