@@ -42,7 +42,14 @@ module.exports = function(grunt) {
 
             var spritesOptions = {
                 path: taskOptions.srcImagesDir,
-                prefix: taskOptions.cssUrlsPrefixedWith
+                prefix: taskOptions.cssUrlsPrefixedWith,
+                
+                // custom urlRegex to ignore base64 data:images and *.gif images 
+                // some info here: https://github.com/madebysource/sprites-preprocessor/pull/2
+                urlRegex: new RegExp("url\\((?:'|\")?((?!(data:[^'\"\\)]+))(?!([^'\"\\)]+gif))([^'\"\\)]+))(?:'|\")?\\)(?:(.*?|\n*?|\r*?))(;|})", "gi"),
+                urlRegexPathMatchIndex: 1,
+                urlRegexRestMatchIndex: 5,
+                urlRegexDelimiterMatchIndex: 6
             };
 
             var nameParts = taskOptions.spriteFileName.split('.');
