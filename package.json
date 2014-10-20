@@ -5,7 +5,7 @@
     "license": "MIT",
     "author": "Aziz Khoury <bentael@gmail.com>",
     "dependencies": {
-        "sprites-preprocessor": "1.0.0",
+        "sprites-preprocessor": "git://github.com/akhoury/sprites-preprocessor.git#master",
         "async": "0.9.0"
     },
     "repository": {
