@@ -54,6 +54,7 @@ grunt sprites-preprocessor
 whatever [spritesmith](https://github.com/Ensighten/spritesmith) requires, I had to
 
 ```
+brew install cairo
 sudo npm install -g phantomjs
 
 # and
